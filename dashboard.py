@@ -87,7 +87,7 @@ elif view_option == "Customer Success Associate":
         st.markdown("Please select Customer Success Associate name.")
     else:
         # columns for subheaders
-        st.markdown('This is the dashboard for Customer Success Associates to see an overview as well as individual customers' health scores.')
+        st.markdown("This is the dashboard for Customer Success Associates to see an overview as well as individual customers' health scores.")
         hd1, hd2 = st.columns([0.7, 1.2])
         hd1.header('Customer Health Overview', divider = 'blue')
         hd2.header('Top 10 Performing Customers', divider = 'blue')
