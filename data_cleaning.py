@@ -85,9 +85,9 @@ data["Normalized & Scaled PGR"] = ((data["Profit Growth Rate"] - np.nanmin(data[
 data["Customer Health Score"] = data["LPU Score"] + data["PS Score"] + data["HP Score"] + data["Normalized & Scaled PGR"]
 
 data["Customer Health"] = "Missing Data"
-data.loc[data["Customer Health Score"] >= 75, "Customer Health"] = "Healthy"
-data.loc[(data["Customer Health Score"] >= 40) & (data["Customer Health Score"] < 75), "Customer Health"] = "Neutral"
-data.loc[data["Customer Health Score"] < 40, "Customer Health"] = "Unhealthy"
+data.loc[data["Customer Health Score"] >= 70, "Customer Health"] = "Healthy"
+data.loc[(data["Customer Health Score"] >= 30) & (data["Customer Health Score"] < 70), "Customer Health"] = "Neutral"
+data.loc[data["Customer Health Score"] < 30, "Customer Health"] = "Unhealthy"
 
 data_missing = data[data["Customer Health"] == "Missing Data"]
 data = data[data["Customer Health"] != "Missing Data"]
