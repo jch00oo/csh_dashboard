@@ -1,5 +1,5 @@
 streamlit
-plotly.express
+plotly
 pandas
 datetime
 timedelta
