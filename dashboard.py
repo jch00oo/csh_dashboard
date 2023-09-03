@@ -4,23 +4,14 @@ import data_cleaning
 
 ### This is the Python script for creating the dashboard.
 
-### TO DO
-# 2: fix axis labels
-# 3. make code for efficient? add commentary and clean up in general
-# 4. fix PGR norm... to smth else idk
-
-# cd OneDrive/Desktop/Projects/Otter
-# python -m streamlit run dashboard.py
-# Ctrl + C to exit web app
-
 ### Import cleaned data
 data = data_cleaning.data
 data_missing = data_cleaning.data_missing
 
 ### Page set up
 st.set_page_config(
-    page_title="Overview",
-    page_icon="📊",
+    page_title="Customer Health Score",
+    page_icon="🦦",
     layout="wide",
 )
 
