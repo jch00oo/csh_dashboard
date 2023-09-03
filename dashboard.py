@@ -171,7 +171,7 @@ elif view_option == "Customer Success Associate":
             useful_columns_list = ['Customer Success Associate', 'Parent Restaurant name','Unique Location ID', 'Highest Product','Orders Week 2', 'Orders Week 1','Cancellations Week 2', 'Cancellations Week 1','Missed Orders Week 2', 'Missed Orders Week 1', 'Average Order Week 2','Average Order Value week 1', 'Last Product Usage Date', 'Payment Status']
             missing_columns_list = ['Customer Success Associate', 'Parent Restaurant name','Unique Location ID','Missing Columns']
             data_missing = missing_csa[useful_columns_list]
-            data_missing['Missing Columns'] = data_missing.apply(lambda x: ','.join(x[x.isnull()].index), axis=1)
+            data_missing['Missing Columns'] = data_missing.apply(lambda x: ', '.join(x[x.isnull()].index), axis=1)
             st.dataframe(data_missing[['Parent Restaurant name', 'Unique Location ID', 'Missing Columns']],use_container_width=True)
         except:
             # add case for if a csa doesn't have any missing data
